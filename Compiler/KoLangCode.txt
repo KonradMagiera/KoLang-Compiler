@@ -1,0 +1,83 @@
+﻿// projekt 2 etap 1
+/*
+zmienna x = "wartosc"										// przypisanie string do x
+zmienna x = "nadpisz x: " + 1 + " " + -2.1					// nadpisane x oraz string concat
+zmienna a = 10 + 1 + 2										// przypisanie obliczen matematycznych, liczby calkowite
+zmienna b = a												// przypisanie wartosci a do b (i32)
+zmienna c = x												// przypisanie wartosci x do c (string)
+pokazMiSwojeTowary(x)										// wypisanie x
+pokazMiSwojeTowary(c)										// wypisanie c ( c == x )
+pokazMiSwojeTowary(b)										// wypisanie b ( b == a )
+pokazMiSwojeTowary(3 + 4 - (7.1 + a))						// wypisanie wyniku obliczen na liczbach rzeczywistych
+zmienna x = 2 - a											// suma z uwzglednieniem zmiennej w dzialaniu, zmiana typu x z [num x i8] na i32
+pokazMiSwojeTowary(x)										// pokazanie nowej wartosci x
+zmienna m = 5 + 2 * 4 + 3									// mnozenie - prawidlowa kolejnosc wykonywania dzialan
+zmienna d = 4 / 2.1 + 5										// dzielenie - prawidlowa kolejnosc wykonywania dzialan
+pokazMiSwojeTowary(m)										// wypisanie m
+pokazMiSwojeTowary(d)										// wypisanie d
+pokazMiSwojeTowary(5.1)										// wypisanie pojedynczej liczby rzeczywistej
+pokazMiSwojeTowary("test " + 1 + " " + -2.2 + " uwaga")		// wypisanie string concat
+DajMiLiczbe(a)												// pobranie i32, nadpisanie poprzedniej wartosci a
+pokazMiSwojeTowary(a)										// wypisanie pobranej wartosci
+zmienna tab[6] = {5, 6, 7, 8, 9, 10}						// stworzenie  tablicy [6 x i32]
+zmienna tablica[] = {2.2, 5, 13.1, 8}						// stworzenie tablicy [4 x double]
+pokazMiSwojeTowary(tab)										// wypisanie calej tablicy tab
+pokazMiSwojeTowary(tablica[2])								// wypisanie 2. elementu tablicy tablica (numeracja od 0)
+zmienna t = tab[3]											// przypisanie wartosci tab[3] do d (i32)
+pokazMiSwojeTowary(t)										// wypisanie przypisania (d == tab[3])
+tab[3] = 21.5 + t											// zmiana wartosci dla tab[3], rzutowanie wyniku double na i32 (typ tablicy)
+pokazMiSwojeTowary(tab[3])									// wypisanie zmienionej wartosci tab[3]
+*/
+
+
+
+// projekt 2 etap 2
+
+
+double printer(double a, double b, int c) {
+	zmienna d = c + 1
+	pokazMiSwojeTowary(a)
+	return d
+}
+
+if ( 2.1 < 3 ) { 
+	if ( 1 < 2 ) { 
+		pokazMiSwojeTowary("w if2.0")
+		if ( 2 + 1 > 5) { pokazMiSwojeTowary("w if3.0") }
+		else if ( 1 == 1 ) { pokazMiSwojeTowary("w if3.1") }
+		else { pokazMiSwojeTowary("w else3.2") }
+	} 
+	pokazMiSwojeTowary("w if1.0") 
+}
+else if (3 < 1) { pokazMiSwojeTowary("w elseif1.1") }
+else if (1 == 5) { pokazMiSwojeTowary("w elseif1.2") }		
+else { pokazMiSwojeTowary("w else1.3") }
+
+pokazMiSwojeTowary("po if")
+
+zmienna a = 0.1
+zmienna d = 5
+
+while (a < d) {
+	pokazMiSwojeTowary("a")
+	pokazMiSwojeTowary(a)
+	zmienna a = a + 1
+	zmienna b = 2
+	while (b > 0) {
+		pokazMiSwojeTowary("b")
+		pokazMiSwojeTowary(b)
+		zmienna b = b - 1
+	}
+}
+
+zmienna a = 5.1
+zmienna a = "a"
+zmienna a = 5.1
+zmienna b = 2.1
+zmienna c = 8
+zmienna z = 1.1
+pokazMiSwojeTowary("stary z")
+pokazMiSwojeTowary(z)
+zmienna z = printer(a, b, c)
+pokazMiSwojeTowary("nowy z")
+pokazMiSwojeTowary(z)
